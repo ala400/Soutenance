@@ -1,0 +1,7 @@
+{
+  "name": "ALPHA INGÉNIERIE",
+  "description": "Site institutionnel pour ALPHA INGÉNIERIE, bureau d'études techniques en ingénierie structurelle et formations BTP à Dakar.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
