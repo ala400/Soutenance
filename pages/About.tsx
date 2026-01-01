@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Target, Eye, Shield, Users, Award, BookOpen } from 'lucide-react';
 
@@ -24,7 +23,12 @@ const About: React.FC = () => {
             </div>
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                 <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1000" alt="Team Work" className="w-full h-full object-cover" />
+                 <img 
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fm=webp&fit=crop&q=75&w=1000" 
+                  alt="Travail d'Équipe chez Alpha Ingénierie" 
+                  className="w-full h-full object-cover" 
+                  loading="lazy"
+                 />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-alpha-gray p-10 rounded-2xl text-white shadow-xl hidden md:block">
                  <p className="text-4xl font-title font-bold text-alpha-gold mb-2">2014</p>
@@ -118,7 +122,12 @@ const About: React.FC = () => {
                </p>
                <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
-                     <img src="https://picsum.photos/seed/director/100/100" alt="Directeur" className="w-full h-full object-cover" />
+                     <img 
+                      src="https://images.unsplash.com/photo-1544717297-fa154da09f9d?auto=format&fm=webp&fit=crop&q=75&w=100" 
+                      alt="Directeur Technique" 
+                      className="w-full h-full object-cover" 
+                      loading="lazy"
+                     />
                   </div>
                   <div>
                      <p className="font-bold">Directeur Technique</p>

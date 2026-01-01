@@ -39,7 +39,7 @@ export const PROJECTS: Project[] = [
     problem: "Nécessité de réduire le poids propre de la structure tout en garantissant une stabilité parasismique.",
     solution: "Utilisation de dalles post-contraintes et optimisation des sections de poteaux par calcul aux éléments finis.",
     results: "Gain de 12% sur le coût du béton et respect strict du planning architectural.",
-    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800"
+    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fm=webp&fit=crop&q=75&w=800"
   },
   {
     id: "2",
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     problem: "Besoin de grandes portées libres sans poteaux intermédiaires pour optimiser le stockage.",
     solution: "Conception d'une charpente en treillis à haute limite élastique.",
     results: "Portée libre de 45 mètres réalisée avec succès sans flèche excessive.",
-    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
+    imageUrl: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fm=webp&fit=crop&q=75&w=800"
   },
   {
     id: "3",
@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
     problem: "Stopper la dégradation sans interrompre totalement le trafic routier.",
     solution: "Traitement cathodique et renforcement par tissus de carbone (PRFC).",
     results: "Durée de vie prolongée de 30 ans avec un impact minimal sur la circulation.",
-    imageUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800"
+    imageUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fm=webp&fit=crop&q=75&w=800"
   },
   {
     id: "4",
@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
     problem: "Gérer l'agressivité du milieu marin et les contraintes mécaniques des consoles.",
     solution: "Béton à haute performance (BHP) et renforcement de l'enrobage.",
     results: "Esthétique architecturale préservée avec une garantie décennale sécurisée.",
-    imageUrl: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=800"
+    imageUrl: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fm=webp&fit=crop&q=75&w=800"
   },
   {
     id: "5",
@@ -87,7 +87,7 @@ export const PROJECTS: Project[] = [
     problem: "Absence de plans de ferraillage d'origine.",
     solution: "Sondages non-destructifs au férroscan et recalcule de la structure existante.",
     results: "Validation de la faisabilité de l'extension après renforcements ponctuels.",
-    imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800"
+    imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fm=webp&fit=crop&q=75&w=800"
   },
   {
     id: "6",
@@ -99,6 +99,6 @@ export const PROJECTS: Project[] = [
     problem: "Intégration des contraintes thermiques dans la conception structurelle.",
     solution: "Murs porteurs à forte inertie et toiture terrasse végétalisée.",
     results: "Confort thermique naturel et structure optimisée pour les surcharges de terre.",
-    imageUrl: "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=800"
+    imageUrl: "https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fm=webp&fit=crop&q=75&w=800"
   }
 ];

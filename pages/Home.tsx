@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // Added Users to imports to resolve the missing component error on line 226
@@ -7,19 +6,19 @@ import { PROJECTS } from '../constants';
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&q=80&w=1500",
+    image: "https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fm=webp&fit=crop&q=80&w=1500",
     title: "L'Excellence de l'Ingénierie Structurelle",
     subtitle: "Sécurisez vos projets de construction avec nos calculs de pointe.",
     cta: "Nos Études Techniques"
   },
   {
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=1500",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fm=webp&fit=crop&q=75&w=1500",
     title: "Transmettre le Savoir BTP",
     subtitle: "Des formations intensives pour les professionnels exigeants.",
     cta: "Voir les Formations"
   },
   {
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1500",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fm=webp&fit=crop&q=75&w=1500",
     title: "De la Conception à la Réalisation",
     subtitle: "Un accompagnement technique rigoureux sur le terrain.",
     cta: "Découvrir nos Projets"
@@ -51,7 +50,12 @@ const Home: React.FC = () => {
             }`}
           >
             <div className="absolute inset-0 bg-alpha-petrol/60 z-10"></div>
-            <img src={slide.image} alt={slide.title} className="w-full h-full object-cover transform scale-105" />
+            <img 
+              src={slide.image} 
+              alt={slide.title} 
+              className="w-full h-full object-cover transform scale-105"
+              loading={index === 0 ? "eager" : "lazy"}
+            />
             
             <div className="absolute inset-0 z-20 flex items-center justify-center">
               <div className="max-w-7xl mx-auto px-6 w-full text-center md:text-left">
@@ -84,10 +88,10 @@ const Home: React.FC = () => {
         ))}
 
         {/* Slider Controls */}
-        <button onClick={prevSlide} className="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all">
+        <button onClick={prevSlide} aria-label="Slide Précédente" className="absolute left-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all">
           <ChevronLeft size={24} />
         </button>
-        <button onClick={nextSlide} className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all">
+        <button onClick={nextSlide} aria-label="Slide Suivante" className="absolute right-6 top-1/2 -translate-y-1/2 z-30 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all">
           <ChevronRight size={24} />
         </button>
         
@@ -95,6 +99,7 @@ const Home: React.FC = () => {
           {slides.map((_, i) => (
             <button 
               key={i} 
+              aria-label={`Aller à la slide ${i + 1}`}
               onClick={() => setCurrentSlide(i)}
               className={`w-12 h-1 transition-all ${i === currentSlide ? 'bg-alpha-gold' : 'bg-white/30'}`}
             />
@@ -141,7 +146,12 @@ const Home: React.FC = () => {
             </div>
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1541913057-219981772f93?auto=format&fit=crop&q=80&w=1000" alt="Ingénierie" className="w-full h-full object-cover" />
+                <img 
+                  src="https://images.unsplash.com/photo-1541913057-219981772f93?auto=format&fm=webp&fit=crop&q=75&w=1000" 
+                  alt="Ingénierie Structurelle à Dakar" 
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
               <div className="absolute -bottom-10 -right-10 bg-alpha-petrol p-8 rounded-2xl text-white shadow-2xl hidden md:block">
                 <p className="text-4xl font-title font-bold text-alpha-gold mb-1">10+</p>
@@ -200,7 +210,12 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {PROJECTS.slice(0, 3).map((project) => (
               <div key={project.id} className="group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-lg">
-                <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+                <img 
+                  src={project.imageUrl} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
+                  loading="lazy"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-alpha-petrol via-alpha-petrol/20 to-transparent p-8 flex flex-col justify-end">
                   <span className="text-alpha-gold text-xs font-bold uppercase tracking-widest mb-2">{project.type}</span>
                   <h4 className="text-white text-xl font-title font-bold mb-4">{project.title}</h4>
@@ -230,7 +245,7 @@ const Home: React.FC = () => {
             ].map((item, i) => (
               <div key={i} className="text-center p-8 border border-gray-100 rounded-2xl hover:shadow-xl transition-all">
                 <div className="w-16 h-16 bg-alpha-gold/10 text-alpha-gold rounded-full flex items-center justify-center mx-auto mb-6">
-                  {React.cloneElement(item.icon, { size: 32 })}
+                  {React.cloneElement(item.icon as React.ReactElement<any>, { size: 32 })}
                 </div>
                 <h4 className="font-title font-bold text-alpha-gray mb-4 uppercase">{item.title}</h4>
                 <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>

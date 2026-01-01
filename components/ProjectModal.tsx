@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { X, Calendar, User, Tag, CheckCircle2 } from 'lucide-react';
 import { Project } from '../types';
@@ -14,6 +13,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
       <div className="bg-white w-full max-w-4xl rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300 relative">
         <button 
           onClick={onClose}
+          aria-label="Fermer le modal"
           className="absolute top-4 right-4 z-10 p-2 bg-white/20 hover:bg-white/40 rounded-full transition-colors text-alpha-gray md:text-white md:bg-alpha-gray/20"
         >
           <X size={24} />
@@ -26,6 +26,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
               src={project.imageUrl} 
               alt={project.title} 
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
 
